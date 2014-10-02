@@ -11,7 +11,9 @@ class IndexView(views.FormValidMessageMixin,
 
 	model = models.Subscriber
 	form_class = SubscriberForm
-	form_valid_message = "Thanks for your interest. We'll keep you posted with updates!"
+
+	def get_form_valid_message(self):
+        	return u"Thanks for checking us out. Subscribed with {0}!".format(self.object.email)
 
 	def form_valid(self, form):
 		self.object = form.save(commit=False)

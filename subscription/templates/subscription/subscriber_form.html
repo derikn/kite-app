@@ -3,13 +3,15 @@
 
 {% block title %} {{ block.super }}{% endblock title %}
 
-{% block headline %}
-{% endblock headline %}
+{% block headline %}<h1>Never worry about expirations again with KITE</h1>{%endblock%}
 
 {% block content %}
 
-<div class="col-md-6">
+<h2>Hey! You found us before we're ready!</h2>
+<p> Things are going well and we’re working to put the finishing touches to our service. It will
+be able to help with your organizing your items very soon. If you would like to be 
+informed of product launch and announcements, please enter your email below.</p>
 {% crispy form %}
-</div>
+
 
 {% endblock content %}
